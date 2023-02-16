@@ -1,5 +1,8 @@
 #include <stdio.h>
-/*Main function*/
+/**
+ * main - Entry Point
+ * Return - 0(success)
+*/
 int main(void)
 {
 char myStr[] = "\"Programming is like building a multilingual puzzle";
