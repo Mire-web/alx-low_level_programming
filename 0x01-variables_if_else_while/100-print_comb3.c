@@ -17,7 +17,7 @@ if (d != n && d < n)
 {
 putchar('0' + d);
 putchar('0' + n);
-if (c + d != 17)
+if (n + d != 17)
 {
 putchar(',');
 putchar(' ');
