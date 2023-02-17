@@ -10,7 +10,7 @@ char c = 'a';
 while (c != 'z')
 {
 putchar(c);
-putchar('/n');
+putchar('\n');
 c += 1;
 }
 return (0);
