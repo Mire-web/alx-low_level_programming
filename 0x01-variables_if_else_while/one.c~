@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <unistd.h>
+
+int main(void)
+{
+  int n;
+  n = 2;
+  putchar((n/10)+'0');
+  putchar((n%10)+'0');
+  putchar('\n');
+   return (0);
+}
