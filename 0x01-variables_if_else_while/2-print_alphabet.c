@@ -9,7 +9,8 @@ int main(void)
 char c = 'a';
 while (c != 'z')
 {
-putchar("%c",c);
+putchar(c);
+putchar('/n');
 c += 1;
 }
 return (0);
