@@ -6,10 +6,10 @@
 
 int main(void)
 {
-int n = '0';
+int n = 0;
 while (n < 10)
 {
-putchar(n);
+putchar((n % 10) + '0');
 n += 1;
 }
 putchar('\n');
