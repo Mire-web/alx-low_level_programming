@@ -13,7 +13,7 @@ while (c <= 'z')
 putchar(c);
 c += 1;
 }
-while(d <= 'Z')
+while (d <= 'Z')
 {
 putchar(d);
 d += 1;
