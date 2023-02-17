@@ -7,14 +7,25 @@
 int main(void)
 {
 int n;
-for (n = 0; n < 10; n++)
+int d = 0;
+while (d < 10)
 {
-putchar(n + '0');
-if (n<9)
+n = 0;
+while (n<10)
+{
+if (d != n && d < n)
+{
+putchar('0' + d);
+putchar('0' + n);
+if (c + d != 17)
 {
 putchar(',');
 putchar(' ');
 }
+}
+n++;
+}
+d++;
 }
 putchar('\n');
 return (0);
