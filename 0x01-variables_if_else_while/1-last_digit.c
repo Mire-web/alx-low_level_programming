@@ -3,7 +3,7 @@
 #include <time.h>
 /**
 * main - Print the last digit of random number and check its magnimity
-* Return - 0 success
+* Return: - 0 success
 */
 int main(void)
 {
