@@ -11,7 +11,7 @@ int d = 0;
 while (d < 10)
 {
 n = 0;
-while (n<10)
+while (n < 10)
 {
 if (d != n && d < n)
 {
