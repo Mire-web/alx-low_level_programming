@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <unistd.h>
-/**                                                                     
- * main - prints combination of two two-digits                           
- * Return: 0 success                                                    
+/**
+ * main - prints combination of two two-digits
+ * Return: 0 success
  */
 int main(void)
 {
