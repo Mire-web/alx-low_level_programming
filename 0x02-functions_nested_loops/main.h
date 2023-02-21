@@ -1,9 +1,16 @@
-/**
- * main -  a header file for main program
- * Return: 1 success
- */
-
-char _putchar (char text)
+char _putchar (char a)
 {
-return text;
+return putchar(a);
+}
+
+int print_alphabet ()
+{
+char a = 'a';
+while (a <= 'z')
+{
+_putchar(a);
+a++;
+}
+_putchar('\n');
+return (0);
 }

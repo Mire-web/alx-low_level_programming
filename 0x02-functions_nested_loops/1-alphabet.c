@@ -6,12 +6,6 @@
  */
 int main(void)
 {
-char a = 'a';
-while (a < 'z')
-{
-_putchar(a);
-a++;
-}
-_putchar('\n');
+print_alphabet();
 return (0);
 }
