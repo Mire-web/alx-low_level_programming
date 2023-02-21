@@ -3,7 +3,7 @@
  * Return: 1 success
  */
 
-char put_char (char text)
+char _putchar (char text)
 {
 return text;
 }
