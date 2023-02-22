@@ -18,6 +18,6 @@ t = nextTerm;
 }
 }
 sum += 4000000;
-printf("%d", sum);
+printf("%d\n", sum);
 return (0);
 }
