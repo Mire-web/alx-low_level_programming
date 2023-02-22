@@ -1,10 +1,9 @@
 #include <stdio.h>
 /**
  * main - entry point
- * Return:int
+ * Return:int 
  */
-int main()
-{
+int main() {
 int count;
 unsigned long n = 0, n2 = 1, sum;
 unsigned long n_half1, n_half2, n2_half1, n2_half2;
