@@ -1,14 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * natural_multiple() - calculate sum of multiples of 3 and 5
+ * natural_multiple - calculate sum of multiples of 3 and 5
  * Return: void
  */
 
-/**
- * main() - entry point
- *Return:int;
- */
 void natural_multiple(void)
 {
 int n = 0;
@@ -23,6 +19,10 @@ n++;
 }
 printf("%d\n", result);
 }
+/**
+ * main - Entry point;
+ * Return: int;
+ */
 
 int main(void)
 {
