@@ -6,7 +6,7 @@
  */
 void fib_seq(void)
 {
-int n = 1, d = 2, c, tmp,count;
+int n = 1, d = 2, c, tmp, count;
 printf("%d, ", 1);
 printf("%d, ", 2);
 for (count = 0; count <= 50; count++)
