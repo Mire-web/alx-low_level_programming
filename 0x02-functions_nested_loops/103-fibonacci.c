@@ -2,17 +2,21 @@
 
 /**
  * main - entry point
- * Return: int 
+ * Return: int
  */
 
-int main() {
+int main(void)
+{
 int sum, n = 1, t = 2, nextTerm, count;
-for (count = 0; count <= 4000000; count++)
+ for (count = 0; count <= 50; count++)
+{
+if (nextTerm < 4000000)
 {
 nextTerm = t + n;
 n = t;
 t = nextTerm;
 sum += nextTerm;
+}
 }
 printf("%d", sum);
 return 0;
