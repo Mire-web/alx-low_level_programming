@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
  * main - entry point
- * Return:int 
+ * Return:int
  */
-int main()
+int main(void)
 {
 int i, n = 98, t1 = 1, t2 = 2, nextTerm;
 
@@ -18,7 +18,8 @@ printf("%d", nextTerm);
 if (i < n)
 {
 printf(", ");
-} else
+}
+else
 {
 printf("\n");
 }
