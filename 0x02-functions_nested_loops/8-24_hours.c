@@ -11,7 +11,7 @@ int n = 0, j, k, l;
 while (n < 3)
 {
 j = 0;
-while (j < 4 && n == 2 || j < 10 && n != 2)
+while ((j < 4 && n == 2) || (j < 10 && n != 2))
 {
 k = 0;
 while (k < 6)
