@@ -4,6 +4,7 @@
  * natural_multiple - calculate sum of multiples of 3 and 5
  * Return: void
  */
+
 /**
  * main - entry point
  *Return:int;
