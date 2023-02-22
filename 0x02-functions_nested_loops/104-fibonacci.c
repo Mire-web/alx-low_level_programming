@@ -3,7 +3,7 @@
  * main - entry point
  * Return:int
  */
-int main()
+int main(void)
 {
 int count;
 unsigned long n = 0, n2 = 1, sum;
