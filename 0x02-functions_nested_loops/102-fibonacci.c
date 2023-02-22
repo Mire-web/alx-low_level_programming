@@ -37,4 +37,5 @@ n = d;
 int main(void)
 {
 fib_seq();
+return (0);
 }
