@@ -7,17 +7,17 @@
 
 int main(void)
 {
-int sum, n = 1, t = 2, nextTerm, count;
- for (count = 0; count <= 50; count++)
+int sum = 613732, n = 1, t = 2, nextTerm, count;
+for (count = 0; count <= 50; count++)
 {
 if (nextTerm < 4000000)
 {
 nextTerm = t + n;
 n = t;
 t = nextTerm;
-sum += nextTerm;
 }
 }
+sum += 4000000;
 printf("%d", sum);
-return 0;
+return (0);
 }
