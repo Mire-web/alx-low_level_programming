@@ -1,0 +1,27 @@
+#include "main.h"
+#include <stdio.h>
+/**
+ * natural_multiple - calculate sum of multiples of 3 and 5
+ * Return: void; 
+ * main - entry point
+ *Return:int;
+ */
+void natural_multiple(void)
+{
+int n = 0;
+int result = 0;
+while (n < 1024)
+{
+if (((n % 3) == 0) || ((n % 5) == 0))
+{
+result += n;
+}
+n++;
+}
+printf("%d\n", result);
+}
+
+int main(void)
+{
+natural_multiple();
+}
