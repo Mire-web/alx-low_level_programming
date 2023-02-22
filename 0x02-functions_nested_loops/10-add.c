@@ -8,7 +8,7 @@
 int add(int n, int j)
 {
 int result = n + j;
-putchar((result / 10) + '0');
-putchar((result % 10) + '0');
+_putchar((result / 10) + '0');
+_putchar((result % 10) + '0');
 return(0);
 }
