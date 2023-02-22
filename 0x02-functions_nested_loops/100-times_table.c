@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * print_times_table - print the 9 times table
- * @n: params 
+ * @n: params
  *Return:void
  */
 void print_times_table(int n)
