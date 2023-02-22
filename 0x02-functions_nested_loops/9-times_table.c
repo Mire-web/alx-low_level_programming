@@ -15,22 +15,22 @@ for (j = 0; j < 10; j++)
 int result = j * n;
 if (result > 9)
 {
-putchar(',');
-putchar(' ');
-putchar((result / 10) + '0');
-putchar((result % 10) + '0');
+_putchar(',');
+_putchar(' ');
+_putchar((result / 10) + '0');
+_putchar((result % 10) + '0');
 }
 else
 {
 if (j != 0)
 {
-putchar(',');
-putchar(' ');
-putchar(' ');
+_putchar(',');
+_putchar(' ');
+_putchar(' ');
 }
-putchar(result + '0');
+_putchar(result + '0');
 }
 }
-putchar('\n');
+_putchar('\n');
 }
 }
