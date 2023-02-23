@@ -2,6 +2,7 @@
 
 /**
  * print_line - draw line in terminal
+ * @n: integer
  * Return: void
  */
 
