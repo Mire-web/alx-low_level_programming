@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_squares - draw square in terminal
+ * print_square - draw square in terminal
  * @size: integer parameter
  * Return: void
  */
