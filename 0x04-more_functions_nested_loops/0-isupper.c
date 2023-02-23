@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /**
  * _isupper - checks if input is uppercase
  * @c: integer 
