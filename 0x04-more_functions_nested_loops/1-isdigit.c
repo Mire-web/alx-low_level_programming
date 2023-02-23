@@ -1,7 +1,7 @@
 /**
  * _isdigit - checks if input is digit
- * @c: integer 
- * Return: int 
+ * @c: integer
+ * Return: int
  */
 
 int _isdigit(int c)
