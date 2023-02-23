@@ -2,7 +2,7 @@
 
 /**
  * print_triangle - print a triangle in terminal
- * @n: integer
+ * @size: integer
  * Return: 0
  */
 
