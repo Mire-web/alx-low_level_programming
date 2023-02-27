@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * puts_half - prints second-half of the string
  * @s: pointer
@@ -23,4 +23,5 @@ for (j = ((i - 1) / 2); j < i; j++)
 _putchar(s[j]);
 s++;
 }
+_putchar('\n');
 }
