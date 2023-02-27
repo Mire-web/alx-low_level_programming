@@ -2,28 +2,18 @@
 
 /**
  * puts2 - prints everyother character
- * @str: pointer
+ * @s: pointer
  */
 
-void puts2(char *str)
+void puts2(char *s)
 {
-int longi = 0;
-int t = 0;
-char *y = str;
-int o;
-
-while (*y != '\0')
+int i = 0;
+while (*s != '\0')
 {
-y++;
-longi++;
+if (i % 2 == 0)
+putchar(*s);
+i++;
+s++;
 }
-t = longi - 1;
-for (o = 0 ; o <= t ; o++)
-{
-if (o % 2 == 0)
-{
-_putchar(str[o]);
-}
-}
-_putchar('\n');
+putchar('\n');
 }
