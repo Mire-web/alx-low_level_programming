@@ -11,9 +11,9 @@ int i = 0;
 while (*s != '\0')
 {
 if (i % 2 == 0)
-putchar(*s);
+_putchar(*s);
 i++;
 s++;
 }
-putchar('\n');
+_putchar('\n');
 }
