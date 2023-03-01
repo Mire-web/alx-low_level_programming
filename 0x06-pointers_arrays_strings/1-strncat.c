@@ -27,5 +27,5 @@ DESTINATION_LENGTH++;
 }
 if (src[counter] == '\0')
 tmp_dest[DESTINATION_LENGTH] = *src;
-return tmp_dest;
+return (tmp_dest);
 }
