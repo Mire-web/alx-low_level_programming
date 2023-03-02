@@ -22,5 +22,5 @@ if (main_n / 10 != 0)
 {
 print_number(main_n / 10);
 }
-_putchar((n1 % 10) + '0');
+_putchar((main_n % 10) + '0');
 }
