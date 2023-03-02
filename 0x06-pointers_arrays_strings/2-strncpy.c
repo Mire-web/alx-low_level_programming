@@ -17,7 +17,6 @@ while (counter < n && src[counter] != '\0')
 tmp_dest[counter] = src[counter];
 counter++;
 }
-if (src[counter] == '\0')
-tmp_dest[counter] = src[counter];
+tmp_dest[counter] = '\0';
 return (tmp_dest);
 }
