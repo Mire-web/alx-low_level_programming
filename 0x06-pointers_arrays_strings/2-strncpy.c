@@ -17,7 +17,7 @@ while (counter < n && src[counter] != '\0')
 tmp_dest[counter] = src[counter];
 counter++;
 }
-while(counter < n)
+while (counter < n)
 {
 tmp_dest[counter] = '\0';
 counter++;
