@@ -25,7 +25,6 @@ tmp_dest[DESTINATION_LENGTH] = src[counter];
 counter++;
 DESTINATION_LENGTH++;
 }
-if (src[counter] == '\0')
-tmp_dest[DESTINATION_LENGTH] = *src;
+tmp_dest[DESTINATION_LENGTH] = '\0';
 return (tmp_dest);
 }
