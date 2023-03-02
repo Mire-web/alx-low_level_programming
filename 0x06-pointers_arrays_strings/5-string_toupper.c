@@ -12,7 +12,7 @@ char *tmp_a = a;
 int count = 0;
 while (a[count] != '\0')
 {
-if (a[count] <= 'A' && a[count] >= 'z')
+if (a[count] => 'A' && a[count] <= 'z')
 a[count] = a[count] - 32;
 count++;
 }
