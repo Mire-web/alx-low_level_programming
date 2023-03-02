@@ -20,7 +20,15 @@ continue;
 }
 else if (a[count] >= 'a' && a[count] <= 'z')
 {
-if (a[count - 1] == ' ' || a[count - 1] == '\t' || a[count - 1] == '\n' || a[count - 1] == ',' || a[count - 1] == '.' || a[count - 1] == '!' || a[count - 1] == ';' || a[count - 1] == '?' || a[count - 1] == '"' || a[count - 1] == '(' || a[count - 1] == ')' || a[count - 1] == '{' || a[count - 1] == '}')
+if (a[count - 1] == ' ' ||
+a[count - 1] == '\t' ||
+a[count - 1] == '\n' ||
+a[count - 1] == ',' ||
+a[count - 1] == '.' || a[count - 1] == '!' ||
+a[count - 1] == ';' || a[count - 1] == '?' ||
+a[count - 1] == '"' ||
+a[count - 1] == '(' || a[count - 1] == ')' ||
+a[count - 1] == '{' || a[count - 1] == '}')
 a[count] -= 32;
 }
 count++;
