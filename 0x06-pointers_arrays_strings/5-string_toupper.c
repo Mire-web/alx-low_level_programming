@@ -10,11 +10,10 @@ char *string_toupper(char *a)
 {
 char *tmp_a = a;
 int count = 0;
-while (*a < 123 && *a > 64)
+while (a[count] => 'A' && a[count] >= 'z')
 {
-tmp_a[count] = *a - 32;
+a[count] = a[count] - 32;
 count++;
-a++;
 }
 return (tmp_a);
 }
