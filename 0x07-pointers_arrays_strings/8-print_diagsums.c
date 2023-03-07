@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * print_chessboard - print sum of diagonals
+ * print_diagsums - print sum of diagonals
  * @a:pointer to array
  * @size: size of array
  */
