@@ -14,7 +14,7 @@ if (a == 1)
 return (1);
 if (n % a == 0 && a > 0)
 return (0);
-return (is_prime(n, n-1));
+return (is_prime(n, n - 1));
 }
 
 /**
