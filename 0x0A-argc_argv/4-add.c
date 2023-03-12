@@ -82,7 +82,7 @@ if (argc < 2)
 printf("0\n");
 return (0);
 }
-if (!_atoi(argv[i]) || check_str_n_num(argv[i])
+if (!_atoi(argv[i]) || check_str_n_num(argv[i]))
 {
 printf("Error\n");
 return (1);
