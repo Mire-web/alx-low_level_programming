@@ -55,7 +55,7 @@ return (n);
 int check_str_n_num(char *str)
 {
 int i;
-for (i = 0; *str != '\0'; i++)
+for (i = 0; str[i] != '\0'; i++)
 {
 if (!isdigit(str[i]))
 return (1);
