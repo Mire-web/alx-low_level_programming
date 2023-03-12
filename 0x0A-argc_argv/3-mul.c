@@ -58,7 +58,7 @@ int i;
 int result = 1;
 for (i = 1; i < argc; i++)
 {
-if (!_atoi(argv[i]))
+if (!_atoi(argv[i]) || argc < 3)
 {
 printf("Error\n");
 return (1);
