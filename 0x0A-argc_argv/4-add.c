@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * _atoi - converts a string to an integer
@@ -46,6 +47,23 @@ return (n);
 }
 
 /**
+ * check_str_n_num - check if there is st among digit
+ * @str: pointer to string
+ * Return:int
+ */
+
+int check_str_n_num(char *str)
+{
+int i;
+for (i = 0; *str != '\0'; i++)
+{
+if (!isdigit(str[i]))
+return (1);
+}
+return (0);
+}
+
+/**
  * main - print command line args
  *
  * @argc: command line argument counter
@@ -64,7 +82,7 @@ if (argc < 2)
 printf("0\n");
 return (0);
 }
-if (!_atoi(argv[i]))
+if (!_atoi(argv[i]) || check_str_n_num(argv[i])
 {
 printf("Error\n");
 return (1);
