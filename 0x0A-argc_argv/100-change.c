@@ -5,7 +5,7 @@
 /**
  * main - print minimum change to be given
  *
- * @argc: argument count 
+ * @argc: argument count
  * @argv: arguments
  * Return:int:
  */
