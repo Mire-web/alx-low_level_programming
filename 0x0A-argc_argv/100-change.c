@@ -31,16 +31,10 @@ return (0);
 
 for (i = 0; i < 5 && num >= 0; i++)
 {
-if (num % coin[i] == 0 && num / coin[i] < min)
+while (num >= coin[i])
 {
-min += num / coin[i];
-break;
-}
-else
-{
-min += num / coin[i];
-num = num % coin[i];
-continue;
+min++;
+num -= coin[i];
 }
 }
 printf("%d\n", min);
