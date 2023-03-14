@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * @brief Create a array object
+ * create_array - Create a array object
  *
  * @size: size of array
  * @c: character to initialize with
