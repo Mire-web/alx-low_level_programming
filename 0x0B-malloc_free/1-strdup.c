@@ -15,7 +15,7 @@ int i;
 int size;
 for (i = 0; str[i] != '\0'; i++)
 size += 1;
-ptr = malloc(sizeof(char) * size);
+ptr = malloc(size + 1);
 if (ptr == NULL || str == NULL)
 return (NULL);
 for (i = 0; i < size; i++)
