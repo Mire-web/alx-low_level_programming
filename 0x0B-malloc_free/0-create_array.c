@@ -15,7 +15,7 @@ char *ptr;
 ptr = malloc(sizeof(char) * size);
 if (size == 0 || ptr == NULL)
 return (NULL);
-int i;
+unsigned int i;
 for (i = 0; i < size; i++)
 ptr[i] = c;
 return (ptr);
