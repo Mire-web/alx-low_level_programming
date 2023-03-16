@@ -19,9 +19,9 @@ if (!s1)
 s1 = "";
 if (!s2)
 s2 = "";
-for (i = 0; s1[i]; i++)
+for (i = 0; s1[len1]; i++)
 len1++;
-for (i = 0; s2[i]; i++)
+for (i = 0; s2[len2]; i++)
 len2++;
 if (n >= len2)
 n = len2;
