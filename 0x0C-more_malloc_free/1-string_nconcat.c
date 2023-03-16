@@ -8,7 +8,7 @@
  * @s1: string one
  * @s2: string two
  * @n: number of string two to concat
- * Return: char* 
+ * Return: char*
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
