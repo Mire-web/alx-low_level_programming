@@ -13,6 +13,8 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
+if (!s1) s1 = "";
+if (!s2) s2 = "";
 int i, j;
 unsigned int k;
 char *ptr;
