@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * malloc_checked : allocate memory using malloc
+ * malloc_checked - allocate memory using malloc
  *
  * @b: size of memory
  * Return: void
