@@ -35,5 +35,6 @@ for (k = 0; k < n && s2[k]; k++)
 ptr[i] = s2[k];
 i++;
 }
+ptr[i] = '\0';
 return (ptr);
 }
