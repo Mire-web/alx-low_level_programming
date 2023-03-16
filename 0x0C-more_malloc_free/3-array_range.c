@@ -18,7 +18,7 @@ return (NULL);
 ptr = malloc(sizeof(int) * ((max - min) + 1));
 if (ptr == NULL)
 return (NULL);
-while (min < max)
+while (min <= max)
 {
 ptr[i] = min;
 i++;
