@@ -68,7 +68,7 @@ if (newDog->name == NULL)
 free(newDog);
 return (NULL);
 }
-newDog->owner = malloc(sizeof(char) * (len2 + 1))
+newDog->owner = malloc(sizeof(char) * (len2 + 1));
 if (dog->owner == NULL)
 {
 free(dog);
