@@ -20,14 +20,14 @@ name_size++;
 while (owner[owner_size])
 owner_size++;
 if (newDog == NULL)
-return NULL;
+return (NULL);
 newDog->name = malloc(name_size + 1);
 if (newDog->name == NULL)
-return NULL;
+return (NULL);
 newDog->name = name;
 newDog->owner = malloc(owner_size + 1);
 if (newDog->owner == NULL)
-return NULL;
+return (NULL);
 newDog->owner = owner;
 newDog->age = age;
 return (newDog);
