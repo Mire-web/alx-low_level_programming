@@ -7,7 +7,7 @@
  * @f: The function associated
  */
 typedef struct op
-11;rgb:0000/0000/0000{
+
 char *op;
 int (*f)(int a, int b);
 } op_t;
