@@ -12,9 +12,9 @@ int i = 0;
 char *sep = "";
 va_list args;
 
+format_t arg;
 va_start(args, format);
 
-format_t arg;
 while (format[i] != '\0')
 {
 switch (format[i])
