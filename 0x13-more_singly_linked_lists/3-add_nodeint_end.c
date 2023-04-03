@@ -19,5 +19,5 @@ ptr = ptr->next;
 h->n = n;
 h->next = NULL;
 ptr->next = h;
-return (h);
+return (ptr->next);
 }
