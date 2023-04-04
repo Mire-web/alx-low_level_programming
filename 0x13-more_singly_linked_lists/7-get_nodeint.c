@@ -12,6 +12,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	listint_t *ptr = malloc(sizeof(listint_t));
 	unsigned int i;
+
 	ptr = head;
 	i = 0;
 	while (i < index)
