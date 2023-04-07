@@ -10,7 +10,7 @@ void print_binary(unsigned long int n)
 /* Initialize variables*/
 unsigned long int b_int, truncate = 0;
 int i = 31;/*size of unsigned long int*/
-if (n < 0 || !n)
+if (!n)
 return;
 while (i >= 0)
 {
