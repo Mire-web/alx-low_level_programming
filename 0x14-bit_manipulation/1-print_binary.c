@@ -11,7 +11,10 @@ void print_binary(unsigned long int n)
 unsigned long int b_int, truncate = 0;
 int i = 31;/*size of unsigned long int*/
 if (!n)
+{
+_putchar('0');
 return;
+}
 while (i >= 0)
 {
 b_int = (n >> i & 1);
