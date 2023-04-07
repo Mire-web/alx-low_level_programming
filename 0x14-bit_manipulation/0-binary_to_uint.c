@@ -28,7 +28,7 @@ while (i <= len)
 {
 if (b[i] == '1')
 {
-sum |= 1 << len - 1 - i;
+sum |= 1 << ((len - 1) - i);
 }
 i++;
 }
