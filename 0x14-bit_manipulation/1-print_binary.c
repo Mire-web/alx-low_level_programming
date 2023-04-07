@@ -16,7 +16,7 @@ while (i >= 0)
 b_int = (n >> i & 1);
 if (truncate || b_int)
 {
-printf("%lu", b_int);
+_putchar(b_int ? '1' : '0');
 truncate = 1;
 }
 i--;
