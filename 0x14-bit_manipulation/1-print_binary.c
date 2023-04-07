@@ -9,7 +9,7 @@ void print_binary(unsigned long int n)
 {
 /* Initialize variables*/
 unsigned long int b_int, truncate = 0;
-int i = 63;/*size of unsigned long int*/
+int i = sizeof(unsigned long int);/*size of unsigned long int*/
 if (!n)
 {
 _putchar('0');
