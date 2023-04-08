@@ -12,7 +12,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 unsigned int sum = 0, mask = 1;
 int i;
-for (i = 0; i < 64; i++)
+for (i = 63; i >= 0; i--)
 {
 if ((n ^ m) & mask << i)
 {
