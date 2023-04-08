@@ -14,8 +14,7 @@ unsigned int sum = 0, mask = 1;
 int i;
 for (i = 0; i < 64; i++)
 {
-if ((n & (mask << i) && !(m & (mask << i)))
-|| (!(n & (mask << i)) && (m & (mask << i))))
+if ((n ^ m) & mask << i)
 {
 sum++;
 }
