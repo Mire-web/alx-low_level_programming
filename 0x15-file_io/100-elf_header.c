@@ -245,7 +245,7 @@ case ET_CORE:
 printf("CORE (Core file)\n");
 break;
 default:
-printf("<unknown: %x>\n", e_type);
+printf("<unknown: %x>\n", header->e_type);
 }
 print_elf_type_entry(header->e_entry, header->e_ident);
 
