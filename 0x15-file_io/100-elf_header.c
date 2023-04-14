@@ -9,7 +9,7 @@
 void check_elf_print_magic(unsigned char *e_ident);
 void print_class_data(unsigned char *e_ident);
 void print_osabi(unsigned char *e_ident);
-void print_elf_type_entry(unsigned long int e_entry, unsigned char *e_ident);
+void print_elf_type_entry(unsigned long int e_entry, unsigned int e_type, unsigned char *e_ident);
 void close_elf_file(int elf);
 
 /**
@@ -147,10 +147,11 @@ printf("<unknown: %x>\n", e_ident[EI_OSABI]);
  * print_elf_type_entry - Print the entry point address and type of elf
  *
  * @e_entry: entry descriptor
+ *@e_type: elf type
  * @e_ident: entry indent
  */
 
-void print_elf_type_entry(unsigned long int e_entry, unsigned char *e_ident)
+void print_elf_type_entry(unsigned long int e_entry, unsigned char e_type, unsigned char *e_ident)
 {
 printf("  ABI Version:                       %d\n", e_ident[EI_ABIVERSION]);
 if (e_ident[EI_DATA] == ELFDATA2MSB)
@@ -246,7 +247,7 @@ exit(98);
 check_elf_print_magic(header->e_ident);
 print_class_data(header->e_ident);
 print_osabi(header->e_ident);
-print_elf_type_entry(header->e_entry, header->e_ident);
+print_elf_type_entry(header->e_entry, header->e_type, header->e_ident);
 
 free(header);
 close_elf_file(fd);
