@@ -9,7 +9,8 @@
 void check_elf_print_magic(unsigned char *e_ident);
 void print_class_data(unsigned char *e_ident);
 void print_osabi(unsigned char *e_ident);
-void print_elf_type_entry(unsigned long int e_entry, unsigned int e_type, unsigned char *e_ident);
+void print_elf_type_entry(unsigned long int e_entry,
+unsigned int e_type, unsigned char *e_ident);
 void close_elf_file(int elf);
 
 /**
@@ -151,7 +152,8 @@ printf("<unknown: %x>\n", e_ident[EI_OSABI]);
  * @e_ident: entry indent
  */
 
-void print_elf_type_entry(unsigned long int e_entry, unsigned char e_type, unsigned char *e_ident)
+void print_elf_type_entry(unsigned long int e_entry,
+unsigned char e_type, unsigned char *e_ident)
 {
 printf("  ABI Version:                       %d\n", e_ident[EI_ABIVERSION]);
 if (e_ident[EI_DATA] == ELFDATA2MSB)
@@ -197,7 +199,7 @@ printf("%#lx\n", e_entry);
 /**
  * close_elf_file - close Elf header file
  *
- * @elf: file descriptor
+ * @fd: file descriptor
  */
 
 void close_elf_file(int fd)
