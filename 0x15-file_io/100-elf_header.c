@@ -24,10 +24,10 @@ int n = 0;
 
 while (n < 4)
 {
-if (e_ident[index] != 127 &&
-e_ident[index] != 'E' &&
-e_ident[index] != 'L' &&
-e_ident[index] != 'F')
+if (e_ident[n] != 127 &&
+e_ident[n] != 'E' &&
+e_ident[n] != 'L' &&
+e_ident[n] != 'F')
 {
 dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 exit(98);
@@ -35,7 +35,7 @@ exit(98);
 n++;
 }
 printf("ELF Header:\n");
-int n = 0;
+n = 0;
 
 printf("  Magic:   ");
 
