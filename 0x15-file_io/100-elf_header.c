@@ -41,9 +41,9 @@ printf("  Magic:   ");
 
 while (n < EI_NIDENT)
 {
-printf("%02x", e_ident[index]);
+printf("%02x", e_ident[n]);
 
-if (index == EI_NIDENT - 1)
+if (n == EI_NIDENT - 1)
 printf("\n");
 else
 printf(" ");
