@@ -1,0 +1,15 @@
+#!/bin/bash
+WORDLIST = "./pass.txt"
+CMD = "/usr/bin/openssl enc -d -aes256 -in ./crackme3.enc -out ./crackme -pass pass:PASSWORD"
+
+
+while read password; do
+eval "${CMD/PASSWORD/$password}"
+if [-f "./crackme3"]; then
+echo "Got it! here you go:: $password"
+exit 0
+fi
+done < "$WORDLIST"
+
+echo "Failed"
+exit 1;
