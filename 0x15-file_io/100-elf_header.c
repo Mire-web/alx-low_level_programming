@@ -221,11 +221,11 @@ exit(98);
 check_elf_print_magic(header->e_ident);
 print_class_data(header->e_ident);
 print_osabi(header->e_ident);
-printf("ABI Version:                    %d\n", header->e_ident[EI_ABIVERSION]);
+printf("  ABI Version:                       %d\n", header->e_ident[EI_ABIVERSION]);
 if (header->e_ident[EI_DATA] == ELFDATA2MSB)
 header->e_type >>= 8;
 
-printf("Type:                              ");
+printf("  Type:                              ");
 
 switch (header->e_type)
 {
