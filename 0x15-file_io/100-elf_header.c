@@ -5,14 +5,51 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 
+void check_elf_print_magic(unsigned char *e_ident);
 void print_class_data(unsigned char *e_ident);
 void print_osabi(unsigned char *e_ident);
 void print_elf_type_entry(unsigned long int e_entry, unsigned char *e_ident);
 void close_elf_file(int elf);
-void print_type(unsigned int e_type);
 
+/**
+ * check_elf_print_magic - check if file is an ELF header file
+ *
+ * @e_ident: pointer to indent
+ */
+
+void check_elf_print_magic(unsigned char *e_ident)
+{
+int n = 0;
+
+while (n < 4)
+{
+if (e_ident[n] != 127 &&
+e_ident[n] != 'E' &&
+e_ident[n] != 'L' &&
+e_ident[n] != 'F')
+{
+dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
+exit(98);
+}
+n++;
+}
+printf("ELF Header:\n");
+n = 0;
+
+printf("  Magic:   ");
+
+while (n < EI_NIDENT)
+{
+printf("%02x", e_ident[n]);
+
+if (n == EI_NIDENT - 1)
+printf("\n");
+else
+printf(" ");
+n++;
+}
+}
 
 /**
  * print_class_data - Prints the data of an ELF header.
@@ -107,37 +144,6 @@ printf("<unknown: %x>\n", e_ident[EI_OSABI]);
 }
 
 /**
- * print_type - Print types
- * @e_type: elf type
- */
-
-void print_type(unsigned int e_type)
-{
-printf("Type:                              ");
-
-switch (e_type)
-{
-case ET_NONE:
-printf("NONE (None)\n");
-break;
-case ET_REL:
-printf("REL (Relocatable file)\n");
-break;
-case ET_EXEC:
-printf("EXEC (Executable file)\n");
-break;
-case ET_DYN:
-printf("DYN (Shared object file)\n");
-break;
-case ET_CORE:
-printf("CORE (Core file)\n");
-break;
-default:
-printf("<unknown: %x>\n", e_type);
-}
-}
-
-/**
  * print_elf_type_entry - Print the entry point address and type of elf
  *
  * @e_entry: entry descriptor
@@ -219,7 +225,28 @@ printf("ABI Version:                    %d\n", header->e_ident[EI_ABIVERSION]);
 if (header->e_ident[EI_DATA] == ELFDATA2MSB)
 header->e_type >>= 8;
 
-print_type(header->e_type);
+printf("Type:                              ");
+
+switch (header->e_type)
+{
+case ET_NONE:
+printf("NONE (None)\n");
+break;
+case ET_REL:
+printf("REL (Relocatable file)\n");
+break;
+case ET_EXEC:
+printf("EXEC (Executable file)\n");
+break;
+case ET_DYN:
+printf("DYN (Shared object file)\n");
+break;
+case ET_CORE:
+printf("CORE (Core file)\n");
+break;
+default:
+printf("<unknown: %x>\n", header->e_type);
+}
 print_elf_type_entry(header->e_entry, header->e_ident);
 
 free(header);
