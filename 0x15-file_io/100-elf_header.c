@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 void check_elf_print_magic(unsigned char *e_ident);
 void print_class_data(unsigned char *e_ident);
@@ -221,32 +222,11 @@ exit(98);
 check_elf_print_magic(header->e_ident);
 print_class_data(header->e_ident);
 print_osabi(header->e_ident);
-printf("  ABI Version:                       %d\n", header->e_ident[EI_ABIVERSION]);
+printf("ABI Version:                    %d\n", header->e_ident[EI_ABIVERSION]);
 if (header->e_ident[EI_DATA] == ELFDATA2MSB)
 header->e_type >>= 8;
 
-printf("  Type:                              ");
-
-switch (header->e_type)
-{
-case ET_NONE:
-printf("NONE (None)\n");
-break;
-case ET_REL:
-printf("REL (Relocatable file)\n");
-break;
-case ET_EXEC:
-printf("EXEC (Executable file)\n");
-break;
-case ET_DYN:
-printf("DYN (Shared object file)\n");
-break;
-case ET_CORE:
-printf("CORE (Core file)\n");
-break;
-default:
-printf("<unknown: %x>\n", header->e_type);
-}
+print_type();
 print_elf_type_entry(header->e_entry, header->e_ident);
 
 free(header);
