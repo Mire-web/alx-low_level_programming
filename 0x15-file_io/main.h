@@ -12,33 +12,41 @@ int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
 
 /**
- * print_type - Print types
+ * check_elf_print_magic - check if file is an ELF header file
  *
+ * @e_ident: pointer to indent
  */
 
-void print_type(void)
+void check_elf_print_magic(unsigned char *e_ident)
 {
-printf("Type:                              ");
+int n = 0;
 
-switch (header->e_type)
+while (n < 4)
 {
-case ET_NONE:
-printf("NONE (None)\n");
-break;
-case ET_REL:
-printf("REL (Relocatable file)\n");
-break;
-case ET_EXEC:
-printf("EXEC (Executable file)\n");
-break;
-case ET_DYN:
-printf("DYN (Shared object file)\n");
-break;
-case ET_CORE:
-printf("CORE (Core file)\n");
-break;
-default:
-printf("<unknown: %x>\n", header->e_type);
+if (e_ident[n] != 127 &&
+e_ident[n] != 'E' &&
+e_ident[n] != 'L' &&
+e_ident[n] != 'F')
+{
+dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
+exit(98);
+}
+n++;
+}
+printf("ELF Header:\n");
+n = 0;
+
+printf("  Magic:   ");
+
+while (n < EI_NIDENT)
+{
+printf("%02x", e_ident[n]);
+
+if (n == EI_NIDENT - 1)
+printf("\n");
+else
+printf(" ");
+n++;
 }
 }
 
