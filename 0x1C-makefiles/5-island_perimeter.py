@@ -4,6 +4,7 @@ Calculate Perimeter of Island described in grid
 Author: Mire
 """
 
+
 def island_perimeter(grid):
     """
     Island Perimeter calculator function
