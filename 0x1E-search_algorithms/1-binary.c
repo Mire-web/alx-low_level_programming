@@ -35,7 +35,7 @@ int binary_search(int *array, size_t size, int value)
 		else if (array[middle] > value)
 			max = middle - 1;
 		else
-			return (array[middle]);
+			return ((int)middle);
 	}
 	return (index);
 }
