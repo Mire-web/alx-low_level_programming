@@ -3,20 +3,6 @@
 
 /* remember compiling math.h with gcc requires `-lm` */
 
-size_t min(size_t a, size_t b);
-
-/**
- * min - returns the minimum of two size_t values
- * @a: first value
- * @b: second value
- *
- * Return: `a` if lower or equal to `b`, `b` otherwise
- */
-size_t min(size_t a, size_t b)
-{
-	return (a <= b ? a : b);
-}
-
 /**
  * jump_search - searches for a value in a sorted array of integers using
  * a jump search algorithm
@@ -30,29 +16,32 @@ size_t min(size_t a, size_t b)
 
 int jump_search(int *array, size_t size, int value)
 {
-	size_t left, right, jump;
+	size_t min, max, i, block_size;
+	int index = -1;
 
-	if (!array || size == 0)
+	if (!array)
 		return (-1);
 
-	jump = sqrt(size);
+	min = 0;
+	block_size = sqrt(size);
+	max = 0;
 
-	for (right = 0; right < size && array[right] < value;
-	     left = right, right += jump)
+	while (max < size && array[max] < value)
 	{
-		printf("Value checked array[%lu] = [%d]\n",
-		       right, array[right]);
+		printf("Value checked array[%lu] = [%d]\n", max, array[max]);
+		min = max;
+		max += block_size;
 	}
 
-	/* causes 'found' msg even when value not in array */
-	printf("Value found between indexes [%lu] and [%lu]\n", left, right);
-
-	for (; left <= min(right, size - 1); left++)
+	printf("Value found between indexes [%lu] and [%lu]\n", min, max);
+	for (i = min; i < size; i++)
 	{
-		printf("Value checked array[%lu] = [%d]\n", left, array[left]);
-		if (array[left] == value)
-			return (left);
+		printf("Value checked array[%lu] = [%d]\n", i, array[i]);
+		if (value == array[i])
+		{
+			index = (int)i;
+			return (index);
+		}
 	}
-
-	return (-1);
+	return (index);
 }
